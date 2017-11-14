@@ -12,7 +12,7 @@ This attitude changed some weeks ago during a __meeting with a customer__. The t
 
 ## The Kano model
 
-{% include image.html url="/images/kano-model.jpg" description="the kano model classifies customer preferences into three main categories." %}
+{% include image.html url="kano-model.jpg" description="the kano model classifies customer preferences into three main categories." %}
 
 The [Kano model]("https://en.wikipedia.org/wiki/Kano_model") is a theory developed in the 1980s by [Noriaki Kano]("https://en.wikipedia.org/wiki/Noriaki_Kano"). It’s visualized as a simple two-axis grid, measuring investment against customer satisfaction. Basically, it describes three distinct categories. As we are software developers, let’s call them features: 
 

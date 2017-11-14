@@ -13,4 +13,4 @@ Of course, this story could have been better, but I think you get the idea behin
 
 As so often, this story can be summed up with other concepts like [Divide and Conquer](https://effectivesoftwaredesign.com/2011/06/06/divide-and-conquer-coping-with-complexity/) or [Taking Babysteps](https://dzone.com/articles/baby-steps-reverse-refactoring). But I like metaphors. And for no reason, I also like tunnels. 
 
-{% include image.html url="/images/refactoring-tunnel.jpg" description="In the middle of a Refactoring Tunnel, surrounded by legacy code." by="Adam.J.W.C." by-url="https://en.wikipedia.org/wiki/Tunnel#/media/File:Hill_60_illowra_battery_port_kembla.jpg" licence="CC BY 3.0" licence-url="https://creativecommons.org/licenses/by/3.0/" %}
+{% include image.html url="refactoring-tunnel.jpg" description="In the middle of a Refactoring Tunnel, surrounded by legacy code." by="Adam.J.W.C." by-url="https://en.wikipedia.org/wiki/Tunnel#/media/File:Hill_60_illowra_battery_port_kembla.jpg" licence="CC BY 3.0" licence-url="https://creativecommons.org/licenses/by/3.0/" %}
