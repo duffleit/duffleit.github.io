@@ -25,6 +25,8 @@ author:
 version:             2.0.0
 github:
   repo:              https://github.com/duffleit/duffleit.github.io
+  pages_url:         https://github.com/duffleit/duffleit.github.io/tree/master/
+
 
 # Gems
 gems: [jekyll-paginate]

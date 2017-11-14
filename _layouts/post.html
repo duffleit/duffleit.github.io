@@ -3,9 +3,22 @@ layout: default
 ---
 
 <article class="post">
+
+    <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
+        <i class="fa fa-calendar-o"></i><span>{{ page.date | date_to_string }}</span>
+    </time>
+
     <h1 class="post-title">{{ page.title }}</h1>
-    <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
-    {{ content }}
+
+    <div class="github-button">
+        <a class="button" href="{{ site.github.pages_url }}{{ page.path | url_encode}}">
+            <i class="fa fa-github"></i><span>improve this post on github</span>
+        </a>
+    </div>
+
+    <div class="post-content">
+        {{ content }}
+    </div>
 </article>
 
 {% if site.related_posts != empty %}

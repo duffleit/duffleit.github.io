@@ -12,11 +12,20 @@
   }
 }
 
+.post-content {
+  font-family: $article-font-family;
+  line-height: $article-line-height;
+}
+
 // Blog post or page title
 .page-title,
 .post-title,
 .post-title a {
   color: #303030;
+}
+
+.github-button{
+  margin-bottom: 1rem;
 }
 
 .page-title,
@@ -26,10 +35,15 @@
 
 // Meta data line below post title
 .post-date {
+  i{
+    margin-right: 0.3rem;
+  }
+
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
   color: #9a9a9a;
+  font-size: $small-font-size;
 }
 
 // Related posts
