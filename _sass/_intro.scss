@@ -1,0 +1,37 @@
+.intro-banner{
+  margin:0 -100%; /* old browsers fallback */
+  margin:0 calc(50% - 50vw);
+  background-color: $gray-1;
+
+  /* background image */
+  background-image: url('/public/images/me.png');
+  background-position: right bottom;
+
+  background-repeat: no-repeat;
+
+}
+
+.intro{
+  padding: 5rem 0;
+
+  h1{
+    margin: 0;
+    padding: 10px 0;
+    font-size: 3rem;
+  }
+
+  .intro-text{
+    padding-top: 1rem;
+    width: 540px;
+    line-height: 40px;
+    font-family: $article-font-family;
+
+    b{
+      color: black;
+    }
+    a, a:hover, a:visited, a:focus, a:active{
+      color: $primary-color;
+      font-weight: bold;
+    }
+  }
+}

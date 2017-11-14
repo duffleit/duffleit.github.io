@@ -3,31 +3,36 @@ layout: default
 title: Home
 ---
 
-<div class="posts">
+<div class="intro-banner">
+    <div class="intro container">
+        <h1>Hi, I'm David.</h1>
+        <div class="intro-text">Building <b>sophisticated software solutions</b> and being part of great
+            <b>teams</b> is both, my <b>passion</b>
+            and my <b>profession</b>.
+        </div>
+        <div class="intro-text">I'm excited about <a href="#">coding</a>, <a href="#">blogging</a>,
+            <a href="#">open-source stuff</a>, the <a href="#">dev community</a>, <a href="#">conferences</a>, <a
+                    href="#">books</a> and <a href="#">may more</a>.
+        </div>
+
+    </div>
+</div>
+
+<!--
     {% for post in paginator.posts %}
     <article class="post">
+        <time datetime="{{ post.date | date_to_xmlschaa }}" class="post-date">
+            <i class="fa fa-calendar-o"></i><span>{{ post.date | date_to_string }}</span>
+        </time>
         <h1 class="post-title">
             <a href="{{ site.baseurl }}{{ post.url }}">
                 {{ post.title }}
             </a>
         </h1>
-
-        <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
-
-        {{ post.content }}
+        <div class="post-content">
+            {{ post.content }}
+        </div>
     </article>
     {% endfor %}
-</div>
+-->
 
-<div class="pagination">
-    {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
-    {% else %}
-    <span class="pagination-item older">Older</span>
-    {% endif %}
-    {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
-    {% else %}
-    <span class="pagination-item newer">Newer</span>
-    {% endif %}
-</div>
