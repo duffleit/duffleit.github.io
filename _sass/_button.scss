@@ -3,13 +3,13 @@
   display: inline-block;
   box-shadow: none;
   margin: 10px 0;
-  padding: 5px 10px;
+  padding: 0.5rem 1rem;
   background-color: $gray-5;
   border-radius: 2px;
   font-size: $small-font-size;
   color: white;
 
   i{
-    margin-right: 5px;
+    margin-right: 0.5rem;
   }
 }

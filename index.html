@@ -14,25 +14,28 @@ title: Home
             <a href="#">open-source stuff</a>, the <a href="#">dev community</a>, <a href="#">conferences</a>, <a
                     href="#">books</a> and <a href="#">may more</a>.
         </div>
-
+        <a class="button" href="{{ site.github.pages_url }}{{ page.path | url_encode}}">
+            <i class="fa  fa-arrow-right"></i><span>Find Out More</span>
+        </a>
     </div>
 </div>
-
-<!--
-    {% for post in paginator.posts %}
-    <article class="post">
-        <time datetime="{{ post.date | date_to_xmlschaa }}" class="post-date">
-            <i class="fa fa-calendar-o"></i><span>{{ post.date | date_to_string }}</span>
-        </time>
-        <h1 class="post-title">
-            <a href="{{ site.baseurl }}{{ post.url }}">
-                {{ post.title }}
-            </a>
-        </h1>
-        <div class="post-content">
-            {{ post.content }}
-        </div>
-    </article>
-    {% endfor %}
--->
-
+<div class="box">
+    <h2>Blog</h2>
+    <div class="info">
+        I blog about a couple of things, but <b>most</b> of them, in one way or another, are related to
+        <b>software engineering</b>. Contents and options are <b>my own</b>.
+    </div>
+    <ul class="post-list">
+        {% for post in paginator.posts %}
+        <li>
+            <h3><a href="#">{{ post.title }}</a></h3>
+            <date> November, 21, 2017</date>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="footer">
+        <a class="button" href="{{ site.github.pages_url }}{{ page.path | url_encode}}">
+            <i class="fa  fa-arrow-right"></i><span>See All Other Posts</span>
+        </a>
+    </div>
+</div>
