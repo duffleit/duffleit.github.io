@@ -1,12 +1,9 @@
-.intro {
-  .box {
-    margin-right: -180px;
-    background: url('/public/images/me.png') no-repeat right bottom;
-    padding: 1.5rem 0 0.5rem;
+.container.intro {
+  max-width: 940px;
 
-    @media screen and (max-width: 760px) {
-      background: none !important;
-    }
+  .box {
+    background: url('/public/images/me.png') no-repeat right bottom;
+    padding: 1.5rem 0 0.5rem 50px;
   }
 
   .row:not(:last-child) {
@@ -18,6 +15,18 @@
 
     b {
       color: black;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container.intro {
+    max-width: 840px;
+    
+    .box {
+      padding: 1.5rem 0 0.5rem 0;
+      background: none !important;
+      margin-right: 0 !important;
     }
   }
 }
