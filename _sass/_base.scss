@@ -31,6 +31,7 @@ body {
 a {
   color: $link-color;
   text-decoration: none;
+  font-weight: bold;
 
   // `:focus` is linked to `:hover` for basic accessibility
   &:hover,

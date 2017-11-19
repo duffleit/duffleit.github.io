@@ -4,36 +4,40 @@ title: Home
 ---
 
 <div class="intro-banner">
-    <div class="intro container">
+    <div class="intro container box">
         <h1>Hi, I'm David.</h1>
-        <div class="intro-text">Building <b>sophisticated software solutions</b> and being part of great
+        <div class="row">Building <b>sophisticated software solutions</b> and being part of great
             <b>teams</b> is both, my <b>passion</b>
             and my <b>profession</b>.
         </div>
-        <div class="intro-text">I'm excited about <a href="#">coding</a>, <a href="#">blogging</a>,
+        <div class="row">I'm excited about <a href="#">coding</a>, <a href="#">blogging</a>,
             <a href="#">open-source stuff</a>, the <a href="#">dev community</a>, <a href="#">conferences</a>, <a
                     href="#">books</a> and <a href="#">may more</a>.
         </div>
-        <a class="button" href="{{ site.github.pages_url }}{{ page.path | url_encode}}">
-            <i class="fa  fa-arrow-right"></i><span>More about me</span>
-        </a>
+        <div class="row">
+            <a class="button" href="{{ site.github.pages_url }}{{ page.path | url_encode}}">
+                <i class="fa  fa-arrow-right"></i><span>More About Me</span>
+            </a>
+        </div>
     </div>
 </div>
 <div class="box">
     <h2>Blog</h2>
-    <div class="info">
+    <div class="row">
         I blog about a couple of things, but <b>most</b> of them, in one way or another, are related to
         <b>software engineering</b>. Contents and options are <b>my own</b>.
     </div>
-    <ul class="post-list">
+    <div class="row">
+    <ul>
         {% for post in paginator.posts %}
         <li>
-            <h3><a href="#">{{ post.title }}</a></h3>
+            <a href="#">{{ post.title }}</a>
             <date> November, 21, 2017</date>
         </li>
         {% endfor %}
     </ul>
-    <div class="footer">
+    </div>
+    <div class="row">
         <a class="button" href="{{ site.github.pages_url }}{{ page.path | url_encode}}">
             <i class="fa  fa-arrow-right"></i><span>See All Other Posts</span>
         </a>

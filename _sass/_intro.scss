@@ -8,31 +8,12 @@
 }
 
 .intro{
-  padding: 5rem 0;
-  margin-bottom: 2rem;
-
-  h1{
-    margin: 0;
-    padding: 10px 0;
-    font-size: 3rem;
-  }
-
-  .intro-text{
-    padding-top: 1rem;
+  .row{
     max-width: 540px;
     line-height: 40px;
-    font-family: $article-font-family;
 
     b{
       color: black;
     }
-    a, a:hover, a:visited, a:focus, a:active{
-      color: $primary-color;
-      font-weight: bold;
-    }
-  }
-
-  .button{
-    margin-top: 2rem;
   }
 }

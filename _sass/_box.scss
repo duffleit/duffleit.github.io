@@ -1,25 +1,17 @@
 .box{
-  margin: 4rem 0;
-  font-family: $article-font-family;
+  padding: 3rem 0;
 
-  .info{
+  .row{
     margin: 1rem 0;
+    font-family: $article-font-family;
   }
 
   ul{
     list-style: square;
-    margin: 1rem 0;
     padding-left: 1rem;
 
     li{
       padding: 0.15rem 0;
-    }
-
-    h3{
-      font-size: $normal-font-size;
-      font-weight: bold;
-      color: black;
-      display: inline;
     }
 
     date{
