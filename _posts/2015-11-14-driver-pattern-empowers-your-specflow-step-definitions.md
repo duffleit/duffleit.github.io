@@ -197,7 +197,7 @@ The **combination of context injection and driver pattern** is a really **powerf
 
 -----
 
-##*About the Page Object Pattern*
+## About the Page Object Pattern
 
 In this context there is also the term **Page Object Pattern** . This pattern works like the **Driver Pattern** we have seen above. With the only difference, that a Page Objects **encapsulates UI** (for example a webpage, or only some controls of it, etc.), while a Driver encapsulates some functions layered above the UI. If you use a lot of automated UI-testing, you can consider to group your test infrastructure by Page Objects. I will not go into depth on this topic, as there are many good posts about this out there. For example [Martin Fowler wrote about it](http://martinfowler.com/bliki/PageObject.html). *And believe me, if Martin Fowler writes about something, you shouldn't try to make it better.* But **if you use the Page Object Pattern in combination with SpecFlow,** don't forget the **Context Injection**.
 
@@ -210,6 +210,8 @@ Since this *[bullshitbingo](https://en.wikipedia.org/wiki/Buzzword_bingo)* can b
 	- [https://code.google.com/p/selenium/wiki/PageObjects](https://code.google.com/p/selenium/wiki/PageObjects) 
 	- [https://code.google.com/p/selenium/wiki/PageFactory](https://code.google.com/p/selenium/wiki/PageFactory)
 
+-----
 
-##*Deepen your knowledge*
+
+## Deepen your knowledge
 If you want to deepen your knowledge about **BDD/ATDD** and **Specflow**, I recommend the [SpecFlow Course held by Gaspar Nagy](http://gasparnagy.com/trainings/specflow/), who is the creator and main contributor of SpecFlow. In this training concepts such as **Design Pattern** or **Page Object Pattern** are explained in detail.

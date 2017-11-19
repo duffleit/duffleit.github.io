@@ -30,15 +30,15 @@ pre code {
 
 // Pygments via Jekyll
 .highlight {
-  padding: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   font-size: .8rem;
   line-height: 1.4;
   background-color: #f9f9f9;
   border-radius: .25rem;
 
   pre {
-    margin-bottom: 0;
+    margin: 0;
+    padding: 1rem;
     overflow-x: auto;
   }
 

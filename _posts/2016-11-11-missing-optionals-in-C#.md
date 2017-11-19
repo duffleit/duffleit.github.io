@@ -38,8 +38,7 @@ Image, it can **additionally throw an Exception**. Of course, You may argue that
 throwing an exception here is legit, but if you only look at the method
 signature, you won’t be able to recognize this.
 
-Why I don’t like exceptions
-===========================
+## Why I don’t like exceptions
 
 There are some reasons why I use exceptions very sparingly. The first one can be
 described by a look at the purpose of exceptions. They can scream "Help me!"
@@ -101,8 +100,7 @@ gets thrown**.
 That’s why we need **some concept to explicitly state**, that our LoadImage
 method will return something that probably contains an image or not.
 
-What are the alternatives?
-==========================
+## What are the alternatives?
 
 If you’re using **value types**, .Net provides an excellent alternative, through
 the introduction of [Nullable
@@ -136,8 +134,7 @@ promise, you will someday wake up with something like this:
 >   Cannot read property `'undefined'` of undefined  
 >   **JavaScript at its best.**
 
-There’s nothing you can’t wrap
-==============================
+## There’s nothing you can’t wrap
 
 A better alternative is to wrap your image into something that gives the user of
 your method (maybe you, two weeks after writing it) the **required hint, that
@@ -164,8 +161,7 @@ So, my advice is to wrap all your return objects into some wrapper objects? Yes,
 about it – you should think of using this instead of exceptions**. If you are
 looking for a generic way to achieve this, now, you should try out Optionals.
 
-Optionals
-=========
+## Optionals
 
 The concept of *optionals, options, maybes*, or whatever you call them, provides a
 great solution for our problem. They are excellent in pointing out that **you
@@ -242,8 +238,7 @@ probably can’t be fulfilled
 * **handle the decision**, on how to manage this
 Optionals value, **at the right part of your application**.
 
-Optionals vs. classic OOP
-=========================
+## Optionals vs. classic OOP
 
 Maybe OOP-hardliners will now question the idea of introducing **the additional
 concept of Optionals**. (thanks to
