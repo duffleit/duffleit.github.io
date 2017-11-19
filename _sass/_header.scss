@@ -1,8 +1,16 @@
 header {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
 
-  border-bottom: 1rem solid $primary-color;
+.color-row{
+  height: 1rem;
+  background-image: url("/public/images/pattern_swirl.png");
+
+  div{
+    height: 1rem;
+    background-color: $primary-color-alpha;
+  }
 }
 
 ul.navbar {
@@ -15,6 +23,7 @@ ul.navbar {
     display: inline;
     float: right;
     margin-left: 1rem;
+    font-weight: bold;
 
     a, a:visited, a:active {
       color: inherit;
