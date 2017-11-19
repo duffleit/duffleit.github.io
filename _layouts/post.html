@@ -1,40 +1,41 @@
 ---
 layout: default
 ---
+<div class="container ">
+    <article class="post">
 
-<article class="post">
+        <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
+            <i class="fa fa-calendar-o"></i><span>{{ page.date | date_to_string }}</span>
+        </time>
 
-    <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
-        <i class="fa fa-calendar-o"></i><span>{{ page.date | date_to_string }}</span>
-    </time>
+        <h1 class="post-title">{{ page.title }}</h1>
 
-    <h1 class="post-title">{{ page.title }}</h1>
-
-    <div class="github-button">
-        <a class="button" href="{{ site.github.pages_url }}{{ page.path | url_encode}}">
-            <i class="fa fa-github"></i><span>improve this post on github</span>
-        </a>
-    </div>
-
-    <div class="post-content">
-        {{ content }}
-    </div>
-</article>
-
-{% if site.related_posts != empty %}
-<aside class="related">
-    <h3>Related posts</h3>
-    <ul class="related-posts">
-        {% for post in site.related_posts limit:3 %}
-        <li>
-            <a href="{{ site.baseurl }}{{ post.url }}">
-                {{ post.title }}
-                <small>
-                    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
-                </small>
+        <div class="github-button">
+            <a class="button" href="{{ site.github.pages_url }}{{ page.path | url_encode}}">
+                <i class="fa fa-github"></i><span>improve this post on github</span>
             </a>
-        </li>
-        {% endfor %}
-    </ul>
-</aside>
-{% endif %}
+        </div>
+
+        <div class="post-content">
+            {{ content }}
+        </div>
+    </article>
+
+    {% if site.related_posts != empty %}
+    <aside class="related">
+        <h3>Related posts</h3>
+        <ul class="related-posts">
+            {% for post in site.related_posts limit:3 %}
+            <li>
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                    {{ post.title }}
+                    <small>
+                        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+                    </small>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </aside>
+    {% endif %}
+</div>

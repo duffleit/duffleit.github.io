@@ -21,25 +21,28 @@ title: Home
         </div>
     </div>
 </div>
-<div class="box">
-    <h2>Blog</h2>
-    <div class="row">
-        I blog about a couple of things, but <b>most</b> of them, in one way or another, are related to
-        <b>software engineering</b>. Contents and options are <b>my own</b>.
+<div class="container">
+    <div class="box">
+        <h2>Blog</h2>
+        <div class="row">
+            I've blogged about a couple of things, but <b>most</b> of them, in one way or another, are related to
+            <b>software engineering</b>. Contents and options are <b>my own</b>.
+        </div>
+        <div class="row">
+            <ul>
+                {% for post in paginator.posts %}
+                <li>
+                    <a href="#">{{ post.title }}</a>
+                    <date> November, 21, 2017</date>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="row">
+            <a class="button" href="{{ site.github.pages_url }}{{ page.path | url_encode}}">
+                <i class="fa  fa-arrow-right"></i><span>See All Other Posts</span>
+            </a>
+        </div>
     </div>
-    <div class="row">
-    <ul>
-        {% for post in paginator.posts %}
-        <li>
-            <a href="#">{{ post.title }}</a>
-            <date> November, 21, 2017</date>
-        </li>
-        {% endfor %}
-    </ul>
-    </div>
-    <div class="row">
-        <a class="button" href="{{ site.github.pages_url }}{{ page.path | url_encode}}">
-            <i class="fa  fa-arrow-right"></i><span>See All Other Posts</span>
-        </a>
-    </div>
+</div>
 </div>
