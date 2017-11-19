@@ -13,11 +13,14 @@
     li{
       padding: 0.15rem 0;
     }
-
-    date{
-      display: inline;
-      font-size: $small-font-size;
-    }
   }
 
+  small{
+    display: inline;
+    font-size: $small-font-size;
+  }
+
+  time{
+    display: inline;
+  }
 }
