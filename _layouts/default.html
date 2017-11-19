@@ -24,12 +24,38 @@
         {{ content }}
     </main>
 
+    <div class="gray-row">
+        <div class="container">
+            <div class="box">
+                <h2>Get in touch</h2>
+                <div class="row">
+                    I am currently based in Vienna and available for hire to <b>develop with passionated teams</b>.
+                    If you want to get in touch, feel free to <a href="/contact">contact me.</a></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
-        <small>
-            &copy;
-            <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>
-            . All rights reserved.
-        </small>
+        <div class="container">
+            <ul>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/contact">CV</a></li>
+            </ul>
+            <ul>
+                <li class="social-links">
+                    <a href="https://www.xing.com/profile/David_Leitner4" target="_blank" class="fa fa-xing"></a>
+                    <a href="http://github.com/duffleit" target="_blank" class="fa fa-github"></a>
+                    <a href="http://twitter.com/duffleit" target="_blank" class="fa fa-twitter"></a>
+                </li>
+            </ul>
+            <ul>
+                <li class="disclaimer">Contents and options are <b>my own</b>.</li>
+            </ul>
+        </div>
     </footer>
 </div>
 

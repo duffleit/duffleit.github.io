@@ -15,5 +15,50 @@
 }
 
 footer {
-  margin-bottom: 2rem;
+  color: white;
+  background-color: $gray-4;
+  padding: 1rem;
+  text-align: center;
+  font-size: $small-font-size;
+
+  a{
+    color: white;
+    font-weight: normal;
+  }
+
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: .5rem;
+
+    li{
+      display: inline;
+      margin-left: 1rem;
+    }
+
+    li:after
+    {
+      color: $gray-3;
+      margin-left: 1rem;
+      content: ' //';
+    }
+    li:last-child:after
+    {
+      content: '';
+    }
+
+    li.social-links a{
+      padding: 0.2rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+
+    li.disclaimer{
+      color: $gray-3;
+      font-family: $article-font-family;
+      font-style: italic;
+    }
+  }
+
 }
+
