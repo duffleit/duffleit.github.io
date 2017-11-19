@@ -1,14 +1,22 @@
-.intro-banner{
-  background: #EAF4F4 url('/public/images/me.png') no-repeat right bottom;
+.intro {
+  .box {
+    margin-right: -180px;
+    background: url('/public/images/me.png') no-repeat right bottom;
+    padding: 1.5rem 0 0.5rem;
 
-}
+    @media screen and (max-width: 760px) {
+      background: none !important;
+    }
+  }
 
-.intro{
-  .row{
-    max-width: 540px;
+  .row:not(:last-child) {
     line-height: 40px;
+  }
 
-    b{
+  .row {
+    max-width: 540px;
+
+    b {
       color: black;
     }
   }
