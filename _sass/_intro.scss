@@ -1,32 +1,35 @@
-.container.intro {
-  max-width: 940px;
+section.intro {
+  padding: 0;
 
-  .box {
+  .container {
     background: url('/public/images/me.png') no-repeat right bottom;
-    padding: 1.5rem 0 0.5rem 50px;
-  }
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
-  .row:not(:last-child) {
-    line-height: 40px;
-  }
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+      padding-bottom: 1rem;
+    }
+    p:not(:last-child) {
+      line-height: 2.2;
+    }
 
-  .row {
-    max-width: 540px;
+    p {
+      max-width: 540px;
+      font-size: 18px;
 
-    b {
-      color: black;
+      b {
+        color: black;
+      }
     }
   }
 }
 
 @media screen and (max-width: 960px) {
-  .container.intro {
-    max-width: 840px;
-    
-    .box {
-      padding: 1.5rem 0 0.5rem 0;
+  section.intro {
+    .container {
       background: none !important;
-      margin-right: 0 !important;
     }
   }
 }

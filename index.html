@@ -3,15 +3,15 @@ layout: default
 title: Home
 ---
 
-<div class="green-row">
-    <div class="intro container">
-        <div class="box">
+<section class="green intro">
+    <div class="container">
+        <div class="row">
             <h1>Hi, I'm David.</h1>
-            <div class="row">Building <b>sophisticated software solutions</b> and being part of great
+            <p>Building <b>sophisticated software solutions</b> and being part of great
                 <b>teams</b> is both, my <b>passion</b>
                 and my <b>profession</b>.
-            </div>
-            <div class="row">I'm excited about
+            </p>
+            <p>I'm excited about
                 <a href="https://github.com/duffleit" target="_blank">coding</a>,
                 <a href="{{site.posts.first.url}}">blogging</a>,
                 <a href="https://github.com/nobt-io/" target="_blank">open-source stuff</a>, the
@@ -19,40 +19,43 @@ title: Home
                 <a href="{{ site.baseurl }}/about">conferences</a>,
                 <a href="https://www.goodreads.com/user/show/74000734-david-leitner" target="_blank">books</a> and
                 <a href="{{ site.baseurl }}/about">many more</a>.
-            </div>
-            <div class="row">
+            </p>
+            <p>
                 <a class="button" href="{{ site.baseurl }}/about">
                     <i class="fa  fa-arrow-right"></i><span>More About Me</span>
                 </a>
-            </div>
+            </p>
         </div>
     </div>
-</div>
-<div class="container">
-    <div class="box">
-        <h2>Blog</h2>
+</section>
+<section>
+    <div class="container">
         <div class="row">
-            I've blogged about a couple of things, but <b>most</b> of them, in one way or another, are related to
-            <b>software engineering</b>.
-        </div>
-        <div class="row">
+            <p class="box">
+            <h2>Blog</h2>
+            <p>
+                I've blogged about a couple of things, but <b>most</b> of them, in one way or another, are related to
+                <b>software engineering</b>.
+            </p>
+            <p>
             <ul>
                 {% for post in paginator.posts %}
                 <li>
                     <a href="{{ post.url }}">{{ post.title }}</a>
                     <small>
-                        <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">
+                        <time datetime="{{ post.date | date_to_xmlschema }}">
                             <span>{{ post.date | date_to_string }}</span>
                         </time>
                     </small>
                 </li>
                 {% endfor %}
             </ul>
-        </div>
-        <div class="row">
-            <a class="button" href="{{ site.baseurl }}/blog">
-                <i class="fa  fa-arrow-right"></i><span>See All Other Posts</span>
-            </a>
+            </p>
+            <p>
+                <a class="button" href="{{ site.baseurl }}/blog">
+                    <i class="fa  fa-arrow-right"></i><span>See All Other Posts</span>
+                </a>
+            </p>
         </div>
     </div>
-</div>
+</section>

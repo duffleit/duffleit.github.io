@@ -1,6 +1,6 @@
-$small-font-size: 16px;
-$normal-font-size: 20px;
-$large-font-size: 25px;
+$small-font-size: 14px;
+$normal-font-size: 16px;
+$large-font-size: 22px;
 
 $gray-1: #f9f9f9;
 $gray-2: #ccc;
@@ -18,11 +18,11 @@ $blue: #268bd2;
 $brown: #8f5536;
 
 $primary-color: #48a770;
-$primary-color-alpha: rgba(0,140,59,0.6);
+$primary-color-alpha: rgba(0, 140, 59, 0.6);
 
 $root-font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $root-font-size: $normal-font-size;
-$root-line-height: 1.5;
+$root-line-height: 2;
 
 $body-color: #515151;
 $body-bg: #fff;
@@ -30,6 +30,8 @@ $link-color: $primary-color;
 
 $article-font-family: 'Noto Serif', serif;
 $article-line-height: 38px;
+
+$handwritten-font-family: 'Pacifico', cursive;
 
 $border-color: #e5e5e5;
 

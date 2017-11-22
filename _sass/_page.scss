@@ -1,0 +1,13 @@
+.page {
+  h1 {
+    text-align: center;
+  }
+
+  section {
+    padding: 6rem 0 7rem;
+  }
+
+  &:last-child {
+    margin-bottom: 5rem;
+  }
+}

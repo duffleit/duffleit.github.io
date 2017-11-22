@@ -3,30 +3,20 @@
 #  only main files contain this front matter, not partials.
 ---
 
-//
-//                        ___
-//                       /\_ \
-//  _____     ___     ___\//\ \      __
-// /\ '__`\  / __`\  / __`\\ \ \   /'__`\
-// \ \ \_\ \/\ \_\ \/\ \_\ \\_\ \_/\  __/
-//  \ \ ,__/\ \____/\ \____//\____\ \____\
-//   \ \ \/  \/___/  \/___/ \/____/\/____/
-//    \ \_\
-//     \/_/
-//
-// Designed, built, and released under MIT license by @mdo. Learn more at
-// https://github.com/poole/poole.
-
 @import "variables";
+
+@import "layout";
 @import "button";
+
 @import "header";
-@import "box";
 @import "intro";
-@import "base";
-@import "type";
+@import "page";
+@import "article";
+@import "about";
+@import "footer";
+
 @import "syntax";
 @import "code";
-@import "layout";
-@import "posts";
 @import "pagination";
-@import "message";
+
+@import "shame";

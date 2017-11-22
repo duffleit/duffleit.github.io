@@ -1,4 +1,4 @@
-.button{
+.button {
   text-align: center;
   display: inline-block;
   box-shadow: none;
@@ -9,7 +9,11 @@
   font-size: $small-font-size;
   color: white;
 
-  i{
+  i {
     margin-right: 0.5rem;
+  }
+
+  &:hover, &:focus, &:visited, &:active {
+    color: white;
   }
 }

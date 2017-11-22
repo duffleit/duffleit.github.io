@@ -3,11 +3,11 @@ header {
   padding-bottom: 1rem;
 }
 
-.color-row{
+.color-row {
   height: 1rem;
   background-image: url("/public/images/pattern_swirl.png");
 
-  div{
+  div {
     height: 1rem;
     background-color: $primary-color-alpha;
   }
@@ -18,12 +18,13 @@ ul.navbar {
   list-style: none;
   margin: 0 1rem 0 0;
   padding: 0;
+  min-height: unset;
 
   li {
-      display: inline;
-      float: right;
-      margin-left: 1rem;
-      font-weight: bold;
+    display: inline;
+    float: right;
+    margin-left: 1rem;
+    font-weight: bold;
 
     a, a:visited, a:active {
       color: inherit;
@@ -40,10 +41,10 @@ ul.navbar {
     margin-left: 0;
     float: none;
 
-    a{
+    a {
       font-weight: bold;
       text-transform: uppercase;
-      font-size: $normal-font-size  ;
+      font-size: $normal-font-size;
     }
 
     small {
