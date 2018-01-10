@@ -23,5 +23,13 @@ section.about-content{
 
   a{
     color: black !important;
+    border-bottom: dashed 1px black;
+    font-weight: 100 !important;
+    text-decoration: none;
+
+    &:hover{
+      border-color: $primary-color;
+      color: $primary-color !important;
+    }
   }
 }
