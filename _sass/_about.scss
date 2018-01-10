@@ -5,7 +5,23 @@ section.about-header {
   color: white;
 
   h1 {
-    margin-top: 20rem;
+    margin: 20rem 0 10rem;
     font-weight: bold;
+  }
+}
+
+section.about-content{
+  p.top-text{
+    margin: 5rem 0 8rem;
+    font-size: larger;
+  }
+
+  p.small-text{
+    font-size: medium;
+    margin-bottom: 3rem;
+  }
+
+  a{
+    color: black !important;
   }
 }

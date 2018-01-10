@@ -1,0 +1,25 @@
+section.contact-header {
+  h1 {
+    font-size: 50px;
+    margin: 10rem 0
+  }
+}
+
+section.contact-content{
+
+  text-align: center;
+
+  p.top-text{
+    font-size: larger;
+  }
+
+  p.social-text{
+    font-size: medium;
+    margin: 5rem 0;
+
+    img{
+      display: inline !important;
+      margin: 0 .2rem .3rem .5rem;
+    }
+  }
+}
