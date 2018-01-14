@@ -5,21 +5,21 @@ section.contact-header {
   }
 }
 
-section.contact-content{
+section.contact-content {
 
   text-align: center;
 
-  p.top-text{
+  p.top-text {
     font-size: larger;
+    margin: 0 0 3rem;
   }
 
-  p.social-text{
+  p.social-text {
     font-size: medium;
-    margin: 5rem 0;
+  }
 
-    img{
-      display: inline !important;
-      margin: 0 .2rem .3rem .5rem;
-    }
+  p img {
+    display: inline !important;
+    margin: 0 .2rem .3rem .5rem;
   }
 }
