@@ -42,7 +42,7 @@ img {
 }
 
 section {
-  padding: 2rem 0 5rem  ;
+  padding: 2rem 0 5rem;
 
   &.gray {
     background-color: $gray-1;
@@ -72,9 +72,11 @@ span {
   &.green {
     color: $primary-color;
   }
-
   &.bold {
     font-weight: bold;
+  }
+  &.no-wrap {
+    white-space: nowrap;
   }
 }
 
