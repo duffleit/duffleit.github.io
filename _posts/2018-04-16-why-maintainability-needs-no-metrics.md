@@ -5,7 +5,6 @@ description: There seems to be a common misunderstanding about the power and lim
 keywords: Metrics, Sonar, Maintainability, Static Code Analysis, Commitment, Cyclomatic Complexity, Lack of Cohesion, LCOM
 ---
 
-## Background
 More and more people seem to start making use of __static code analysis tools__. On the one hand, __project sponsors__ conspire to express the process of software development in measurable numbers by tools like Sonar. Of course, not without reasons and often argued through Tom DeMarco’s famous, "You can't control what you can't measure". On the other hand, __software developers__ are interested in the __automation of metrics__ in order to continuously check a certain level of code standards. In many cases, metrics even tend to become the Key Performance Indicators (KPIs) of the source code, which is absolutely not advisable in my opinion. Thus, there seems to be a common misunderstanding about the power and limits of metrics, which I would like to tackle in this post.
 
 ## Metrics in a nutshell
