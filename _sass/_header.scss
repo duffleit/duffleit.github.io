@@ -13,8 +13,12 @@ header {
   }
 }
 
-ul.navbar, ul.menu {
+nav.container{
+  text-align: right;
+}
 
+ul.navbar, ul.menu {
+  display:inline-block;
   list-style: none;
   margin: 0 1rem 0 0;
   padding: 0;
