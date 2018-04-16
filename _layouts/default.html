@@ -8,15 +8,24 @@
 <header>
     <nav class="container">
         <div class="row">
-            <ul class="navbar" id="navbar">
-                <li class="title">
-                    <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-                    <small>{{ site.tagline }}</small>
-                </li>
-
-                <li><a href="{{site.posts.first.url}}">Blog</a></li>
-                <li><a href="{{ site.baseurl }}/about">About</a></li>
-                <li class="icon"><a href="javascript:void(0);" onclick="showMenu()">&#9776;</a></li>
+            <div class="title">
+                <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+                <small>{{ site.tagline }}</small>
+            </div>
+            <ul class="navbar">
+                <li class="desktop-item"><a href="{{site.posts.first.url}}">Blog</a></li>
+                <li class="desktop-item"><a href="{{ site.baseurl }}/about">About</a></li>
+                <li class="desktop-item"><a target="_blank" href="https://twitter.com/duffleit" class="twitter-badge">
+                    <i class="fa fa-twitter"></i> follow @duffleit
+                </a></li>
+                <li class="mobile-item"><a href="javascript:void(0);" onclick="showMenu()">&#9776;</a></li>
+            </ul>
+            <ul class="menu" id="mobile-menu">
+                <li class="desktop-item"><a href="{{site.posts.first.url}}">Blog</a></li>
+                <li class="desktop-item"><a href="{{ site.baseurl }}/about">About</a></li>
+                <li class="desktop-item"><a target="_blank" href="https://twitter.com/duffleit" class="twitter-badge">
+                    <i class="fa fa-twitter"></i> follow @duffleit
+                </a></li>
             </ul>
         </div>
     </nav>
@@ -52,7 +61,8 @@
                 <ul>
                     <li class="social-links">
                         <a href="https://www.xing.com/profile/David_Leitner4" target="_blank" class="fa fa-xing"></a>
-                        <a href="https://www.linkedin.com/in/david-leitner-7768a3136" target="_blank" class="fa fa-linkedin"></a>
+                        <a href="https://www.linkedin.com/in/david-leitner-7768a3136" target="_blank"
+                           class="fa fa-linkedin"></a>
                         <a href="http://github.com/duffleit" target="_blank" class="fa fa-github"></a>
                         <a href="http://twitter.com/duffleit" target="_blank" class="fa fa-twitter"></a>
                     </li>

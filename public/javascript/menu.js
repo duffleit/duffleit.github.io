@@ -1,8 +1,8 @@
 function showMenu() {
 
-    const navbarId = "navbar";
-    const navbarClass = "navbar";
-    const navbarResponsiveClass = "menu";
+    const navbarId = "mobile-menu";
+    const navbarClass = "menu";
+    const navbarResponsiveClass = "visible";
 
     var bar = document.getElementById(navbarId);
 
