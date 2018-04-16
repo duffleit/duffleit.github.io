@@ -1,7 +1,7 @@
 article {
   padding: 3rem 0;
 
-  h2{
+  h2 {
     padding: 3rem 0 2rem 0;
   }
 
@@ -15,5 +15,29 @@ article {
     margin-bottom: 1rem;
     color: #9a9a9a;
     font-size: $small-font-size;
+  }
+}
+
+section.author {
+  padding-bottom: 0;
+  border-bottom: 2px solid green;
+
+  .row {
+    display: flex;
+
+    .avatar-col {
+      align-self: flex-end;
+
+      img {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    .about-col{
+      padding: 2rem 0;
+      border-top: 1px dashed grey;
+      font-style: italic;
+    }
   }
 }
