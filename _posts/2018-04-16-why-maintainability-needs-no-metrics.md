@@ -22,6 +22,8 @@ That's one of the reasons why metrics can only inspect the tip of the iceberg in
 
 Of course, we can start trying to find metrics that evaluate if abstractions are well-chosen or concepts in a codebase are consistent, but I'm quite sure going down this path is, unfortunately, a road to nowhere, as these source code properties normally cannot be measured useful anymore by the simple usage of __negative indicators__. They depend on a wide variety of complex factors, which can be a part of the codebase, but often aren't. The latter case makes the application of metrics almost impossible. For example, you won't be able to verify the consistent usage of the ubiquitous language or a valid mapping between the technical implementation and the real word model by only observing a given codebase.
 
+{% include image.html url="metrics-iceberg.png" description="Metrics only inspect the tip of the iceberg." by="Vvstudio - Freepik.com" by-url="https://www.freepik.com/free-vector/iceberg_1075784.htm" licence="Freepik Licence" licence-url="https://profile.freepik.com/license/free" %}
+
 ## What maintainability really needs
 So, if metrics only observe a partition of the maintainability, what’s the alternative? Well, __as software is a social construct__, the most important ingredient for a maintainable codebase is __commitment__. People will always find a way around to sidestep given rules if they don't believe in their benefits. But, if they have a __common understanding and commitment__ about maintainability in their codebase, they will no longer question it.
 
@@ -31,3 +33,8 @@ I think there can be cases where this approach does not lead to the expected res
 
 ## Conclusion
 Metrics have __the great advantage of automation__, but can __only cover a small part of what actually impacts the maintainability__ of the source code. Therefore, a __common understanding__ of and __commitment__ to the definition of maintainability within a team should be forced, as it usually leads to better results in the long run. Like so many other suggestions on achieving a maintainable codebase, this seems awfully incomplete. Yet, I have found it useful – and in the end, that is what counts.
+
+<div class="article-tweet">
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Finally <a href="https://twitter.com/hashtag/blogged?src=hash&amp;ref_src=twsrc%5Etfw">#blogged</a> about something, I have been carrying around in my head for a while now. <a href="https://t.co/4BuUG4SIHr">https://t.co/4BuUG4SIHr</a></p>&mdash; David Leitner (@duffleit) <a href="https://twitter.com/duffleit/status/986110165245136896?ref_src=twsrc%5Etfw">April 17, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
