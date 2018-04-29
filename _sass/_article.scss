@@ -16,6 +16,31 @@ article {
     color: #9a9a9a;
     font-size: $small-font-size;
   }
+
+  .article-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0;
+
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 0 0 1rem;
+      border-radius: 5px;
+    }
+
+    .caption {
+      font-style: italic;
+    }
+  }
+
+  .article-tweet {
+    margin: 5rem 0 0 0;
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 section.author {
@@ -34,7 +59,7 @@ section.author {
       }
     }
 
-    .about-col{
+    .about-col {
       padding: 2rem 0;
       border-top: 1px dashed grey;
       font-style: italic;

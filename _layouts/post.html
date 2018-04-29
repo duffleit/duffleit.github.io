@@ -39,7 +39,7 @@ layout: default
     <div class="container">
         <div class="row">
             <h2>Related posts</h2>
-            <ul>
+            <ul class="inside">
                 {% for post in site.related_posts limit:3 %}
                 <li>
                     <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>

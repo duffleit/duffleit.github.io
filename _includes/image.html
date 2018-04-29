@@ -1,11 +1,8 @@
-<div class="image">
+<div class="article-image">
     <img src="/public/images/{{ include.url }}" alt="{{ include.description }}"/>
-    <caption align="bottom">
-        {{ include.description }}
-        <small>
-            {% if include.by != '' %}by <a href="{{include.by-url}}">{{include.by}}</a>{% endif %}
-            {% if include.licence != '' %} via <a href="{{include.licence-url}}">{{include.licence}}</a>{% endif %}
-        </small>
-        <div style="clear: both"></div>
-    </caption>
+    <div class="caption">{{ include.description }}</div>
+    <small>
+        {% if include.by != '' %}by <a href="{{include.by-url}}">{{include.by}}</a>{% endif %}
+        {% if include.licence != '' %} via <a href="{{include.licence-url}}">{{include.licence}}</a>{% endif %}
+    </small>
 </div>
