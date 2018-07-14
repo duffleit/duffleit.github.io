@@ -1,0 +1,59 @@
+section.talks {
+  padding: 0 !important;
+  color: white;
+
+  .row {
+    background: -moz-linear-gradient(
+      left,
+      $secondary-color 0%,
+      rgba(59, 150, 202, 0) 25%,
+      rgba(141, 213, 136, 0) 75%,
+      $secondary-color 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      left,
+      $secondary-color 0%,
+      rgba(59, 150, 202, 0) 25%,
+      rgba(141, 213, 136, 0) 75%,
+      $secondary-color 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to right,
+      $secondary-color 0%,
+      rgba(59, 150, 202, 0) 25%,
+      rgba(141, 213, 136, 0) 75%,
+      $secondary-color 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background-size: cover; 
+    height: 300px;
+  }
+  .container {
+    padding: 0;
+    background: url("/public/images/talks.jpg") center center;
+    background-size: cover;
+  }
+}
+
+.talk-list {
+  margin-top: 5rem;
+
+  .talk {
+    padding: 3rem 0;
+    border-top: 1px dashed grey;
+
+    .talk-coveriframe {
+      width: 100% !important;
+      height: auto;
+    }
+
+    .talk-description {
+      h2 {
+        font-size: 20px;
+      }
+
+      .talk-buttons .button {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

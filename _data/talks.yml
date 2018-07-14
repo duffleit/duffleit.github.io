@@ -1,0 +1,36 @@
+- speakerdeck-id: b7996912007a4c72978a5748e21dfb25
+  title: Advanced Angular Design Patterns
+  location: Eastcode Sessions (Košice, Slovakia)
+  date: 2018-07-11
+  slides: https://speakerdeck.com/duffleit/advanced-angular-design-patterns
+  event: https://www.meetup.com/de-DE/eastcode-sessions/events/251475451/
+  source: https://github.com/duffleit/angular-advanced-design-patterns/
+- speakerdeck-id: 256291ec6a62495e9b848f1031a5aa31
+  title: Compound Components in Angular
+  location: Angular Vienna (Vienna, Austria)
+  date: 2018-06-14
+  slides: https://speakerdeck.com/duffleit/compound-components-in-angular
+  event: https://www.meetup.com/de-DE/Angular-Vienna/events/248673721/ 
+  video: https://www.youtube.com/watch?v=sxQ8RnvLFPc 
+  source: https://github.com/duffleit/compound-components-in-angular/
+- speakerdeck-id: 0d6ead4117e248e98a5aeeedf2eaf12a  
+  titel: "Flux: A modern way of doing MVC?"
+  location: Voxxed Days (Vienna, Austria)
+  date: 13-03-2018
+  slides: https://speakerdeck.com/duffleit/flux-a-modern-way-of-doing-mvc
+  event: https://voxxeddays.com/
+  video: https://www.youtube.com/watch?v=h9SDuTSy7ps
+- speakerdeck-id: 0f77892bc3084bf880e8d826db562586
+  title: How the Cloud enhances your Agile Development
+  location: Agile Tour Vienna (Vienna, Austria)
+  date: 12-11-2016
+  slides: https://speakerdeck.com/duffleit/how-the-cloud-enhances-your-agile-development
+  event: http://agiletourvienna.at
+- speakerdeck-id: e281f5c2804a4dcbbceaaaf5d82ccb86
+  title: An Introduction to Angular2
+  location: Linux Tage Wien (Vienna, Austria)
+  slides: https://speakerdeck.com/duffleit/an-introduction-to-angular2
+  source: https://github.com/duffleit/LinuxWochen
+
+
+
