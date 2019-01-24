@@ -29,4 +29,4 @@ github:
 
 
 # Gems
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
