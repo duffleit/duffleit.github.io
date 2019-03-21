@@ -82,7 +82,7 @@ section.ngtraining-topics {
     font-style: italic;
     padding-top: 2rem;
 
-    img{
+    img {
       width: 24px;
     }
   }
@@ -142,5 +142,10 @@ section.quotes {
       font-size: 0.7rem;
       text-align: right;
     }
+  }
+  .twitter .col-12 {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
   }
 }
