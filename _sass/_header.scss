@@ -3,22 +3,25 @@ header {
   padding-bottom: 1rem;
 }
 
-.color-row {
-  height: 1rem;
-  background-image: url("/public/images/pattern_swirl.png");
+nav.container {
+  color: white;
+  text-align: right;
 
-  div {
-    height: 1rem;
-    background-color: $primary-color-alpha;
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobile.row {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
-nav.container{
-  text-align: right;
-}
-
-ul.navbar, ul.menu {
-  display:inline-block;
+ul.navbar,
+ul.menu {
+  display: inline-block;
   list-style: none;
   margin: 0 1rem 0 0;
   padding: 0;
@@ -30,13 +33,16 @@ ul.navbar, ul.menu {
     margin-left: 1rem;
     font-weight: bold;
 
-    a, a:visited, a:active {
-      color: inherit;
+    a,
+    a:visited,
+    a:active {
+      color: white;
       font-size: $small-font-size;
     }
 
-    a:hover, a:focus {
-      color: $primary-color;
+    a:hover,
+    a:focus {
+      color: white;
       text-decoration: none;
     }
 
@@ -53,9 +59,11 @@ ul.navbar, ul.menu {
       font-weight: bold;
 
       &:active {
-        box-shadow: inset 0 3px 5px rgba(0,0,0,.1);
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.1);
       }
-      &:active, &:focus, &:hover {
+      &:active,
+      &:focus,
+      &:hover {
         background-color: #0c7abf;
       }
     }
@@ -87,27 +95,71 @@ ul.menu {
   ul.navbar li.mobile-item {
     display: inline;
   }
-
 }
 
 .title {
-  margin-left: 0;
-  float: left;
-
-  a, a:hover, a:focus, a:visited, a:active {
+  a,
+  a:hover,
+  a:focus,
+  a:visited,
+  a:active {
     font-weight: bold;
     text-transform: uppercase;
     font-size: $normal-font-size;
-    color: black;
+    color: white;
     text-decoration: none;
   }
+}
 
-  small {
-    font-size: $small-font-size;
-    font-weight: 400;
-    opacity: .5;
-    font-style: italic;
-    font-family: $article-font-family;
+/*
+#header {
+  display: block;
+  width: 100%;
+  z-index: 100;
+  background: $primary-color;
+  opacity: 0.9;
 
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    margin: 0;
+
+    a {
+      font-weight: bold;
+      color: white;
+
+      &:hover,
+      &:focus,
+      &:visited,
+      &:active {
+        text-decoration: none;
+      }
+    }
+  }
+
+  nav a {
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: white;
+    text-decoration: none;
+
+    &::before {
+      content: '\f0c9';
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: none !important;
+      padding-right: 0.5rem;
+    }
   }
 }
+
+*/

@@ -1,0 +1,146 @@
+$angular-color: #bc1437;
+section.ngtraining-detail {
+  background: $angular-color;
+
+  img {
+    max-width: 100%;
+  }
+
+  .container {
+    padding: 3rem 0 2rem;
+  }
+  .intro {
+    padding-bottom: 1rem;
+  }
+  h1 {
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 3rem 0;
+  }
+
+  p.top-text {
+    margin: 0 0 4rem;
+    font-size: larger;
+  }
+
+  p.small-text {
+    font-size: medium;
+    margin-bottom: 3rem;
+  }
+
+  .button-row {
+    padding-top: 2rem;
+  }
+}
+
+section.ngtraining-topics::before {
+  @include inter-section($angular-color, #eeeeee, 1);
+}
+section.ngtraining-topics {
+  .intro {
+    padding-bottom: 4rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+    height: 3rem;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+  }
+  ul {
+    padding: 0 0 0 20px;
+    margin-bottom: 4rem;
+  }
+  li {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+  }
+  .col-md-4 > i {
+    color: $angular-color;
+    float: left;
+    margin-top: 0.6rem;
+    margin-right: 1rem;
+  }
+
+  .additional-topics {
+    text-align: center;
+
+    i {
+      color: $angular-color;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .button-row {
+    padding-top: 2rem;
+  }
+  .languages {
+    font-style: italic;
+    padding-top: 2rem;
+
+    img{
+      width: 24px;
+    }
+  }
+}
+
+section.trainer::before {
+  @include inter-section(#eeeeee, $angular-color, -1);
+}
+
+section.trainer {
+  padding: 0;
+  color: white;
+  background: $angular-color;
+
+  .image-col {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 1rem 0 2rem;
+
+    .image-border {
+      border: 2px solid white;
+      padding: 0.5rem;
+      border-radius: 50%;
+    }
+    .image {
+      background-image: url('/public/images/me.jpg');
+      height: 180px;
+      width: 180px;
+      border-radius: 50%;
+      background-size: cover;
+    }
+  }
+
+  .container {
+    padding: 8rem 2rem 2rem;
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+      padding-bottom: 1rem;
+    }
+  }
+}
+section.quotes::before {
+  @include inter-section($angular-color, #eeeeee, 1);
+}
+
+section.quotes {
+  .quote-box {
+    margin-bottom: 1rem;
+    .quote {
+      background: white;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+    }
+    .origin {
+      font-size: 0.7rem;
+      text-align: right;
+    }
+  }
+}

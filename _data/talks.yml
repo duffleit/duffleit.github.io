@@ -1,5 +1,11 @@
 - speakerdeck-id: 8090271de0db43a5848c61dcc3aa34dd
-  title: Micro Frontends
+  title: An approach driven Comparison on Microfrontends
+  location: agentconf.sh (Dornbirn, Austria)
+  date: 2019-02-22
+  slides: https://speakerdeck.com/duffleit/microfrontends-c587441e-d8e7-4883-9e14-c9dfaf8e36e3
+  event: http://snowcamp.io/
+- speakerdeck-id: 8090271de0db43a5848c61dcc3aa34dd
+  title: Micro Frontends beyond the hype
   location: snowcamp.io (Grenoble, France)
   date: 2019-01-24
   slides: https://speakerdeck.com/duffleit/microfrontends-c587441e-d8e7-4883-9e14-c9dfaf8e36e3
@@ -31,7 +37,6 @@
   slides: https://speakerdeck.com/duffleit/compound-components-in-angular
   event: https://www.meetup.com/de-DE/Angular-Vienna/events/248673721/ 
   video: https://www.youtube.com/watch?v=sxQ8RnvLFPc 
-  source: https://github.com/duffleit/compound-components-in-angular/
 - speakerdeck-id: 0d6ead4117e248e98a5aeeedf2eaf12a  
   title: "Flux: A modern way of doing MVC?"
   location: Voxxed Days (Vienna, Austria)

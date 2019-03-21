@@ -1,57 +1,31 @@
 ---
 layout: default
 ---
+
 <section>
-    <article class="container ">
+  <article class="container ">
+    <div class="row">
+      <div class="col-12">
         <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
-            <i class="fa fa-calendar-o"></i><span>{{ page.date | date_to_string }}</span>
+          <i class="fa fa-calendar-o"></i
+          ><span>{{ page.date | date_to_string }}</span>
         </time>
 
         <h1 class="post-title">{{ page.title }}</h1>
 
         <div class="github-button">
-            <a class="button" href="{{ site.github.pages_url }}{{ page.path | url_encode}}">
-                <i class="fa fa-github"></i><span>improve this post on github</span>
-            </a>
+          <a
+            class="button"
+            href="{{ site.github.pages_url }}{{ page.path | url_encode }}"
+          >
+            <i class="fa fa-github"></i><span>improve this post on github</span>
+          </a>
         </div>
 
         <div class="post-content">
-            {{ content }}
+          {{ content }}
         </div>
-
-    </article>
-</section>
-
-<section class="author">
-    <div class="container">
-        <div class="row">
-            <div class="hidden-xs col-m-3 avatar-col">
-                <img src="/public/images/me.png"></div>
-            <div class="col-xs-12 col-m-9 about-col">
-                <b>My name is David.</b>
-                <span>I'm an Enthusiastic Software Professional, currently based in Vienna and work in various projects using a bunch of different stacks and environments. I don't sleep too much, do open source and prefer keeping my code simple and small instead of clever and edgy.&nbsp;&nbsp;</span>
-                <a href="/about"><i class="fa fa-arrow-right"></i> more</a>
-            </div>
-        </div>
-</section>
-{% if site.related_posts != empty %}
-<section class="green">
-    <div class="container">
-        <div class="row">
-            <h2>Related posts</h2>
-            <ul class="inside">
-                {% for post in site.related_posts limit:3 %}
-                <li>
-                    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                    <small>
-                        <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">
-                            <span>{{ post.date | date_to_string }}</span>
-                        </time>
-                    </small>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
+      </div>
     </div>
+  </article>
 </section>
-{% endif %}

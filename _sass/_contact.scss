@@ -1,25 +1,109 @@
-section.contact-header {
-  h1 {
-    font-size: 50px;
-    margin: 10rem 0
-  }
+section.contact::before {
+  @include inter-section(none, #eeeeee);
+  transform: scaleY(-1) scaleX(-1);
 }
 
-section.contact-content {
+section.contact {
+  color: white;
+  background: none;
 
-  text-align: center;
+  a {
+    color: white;
 
-  p.top-text {
-    font-size: larger;
-    margin: 0 0 3rem;
+    &:hover,
+    &:focus {
+      color: white;
+    }
   }
 
-  p.social-text {
-    font-size: medium;
-  }
+  form {
+    font-size: 0.9rem;
+    padding-right: 2rem;
 
-  p img {
-    display: inline !important;
-    margin: 0 .2rem .3rem .5rem;
+    label,
+    input,
+    textarea {
+      display: block;
+    }
+
+    label {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 1rem 0 0 0;
+    }
+
+    input,
+    textarea {
+      background: rgba(255, 255, 255, 0.025);
+      border-radius: 5px;
+      border: none;
+      border: solid 2px rgba(255, 255, 255, 0.125);
+      color: inherit;
+      display: block;
+      outline: 0;
+      padding: 0 1em;
+      text-decoration: none;
+      width: 100%;
+      padding: 0.5rem 1rem;
+    }
+
+    .button {
+      margin-top: 2rem;
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 2.5rem 0 0;
+
+    li {
+      padding: 0 0 0 3.25em;
+      position: relative;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      padding: 0.2rem 0 2rem 3rem;
+    }
+
+    li::before {
+      border-radius: 100%;
+      border: solid 2px rgba(255, 255, 255, 0.125);
+      display: inline-block;
+      font-size: 0.8em;
+      height: 2.5em;
+      left: 0;
+      line-height: 2.35em;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 2.5em;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: none !important;
+    }
+
+    li.adress::before {
+      content: '\f015';
+    }
+    li.mail::before {
+      content: '\f003';
+    }
+    li.xing::before {
+      content: '\f168';
+    }
+    li.linkedin::before {
+      content: '\f0e1';
+    }
+
+    li.wko {
+      font-weight: bold;
+
+      img {
+        margin-right: 0.5rem;
+        width: 70px;
+      }
+      &::before {
+        content: '\f0f6';
+      }
+    }
   }
 }

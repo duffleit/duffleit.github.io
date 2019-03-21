@@ -3,18 +3,22 @@
 #  only main files contain this front matter, not partials.
 ---
 
+@import "vendor";
 @import "variables";
 
 @import "layout";
 @import "button";
+@import "menu";
+@import "header";
 
-@import "talks";
 @import "intro";
+@import "talks";
+@import "blog";
 @import "about";
 @import "contact";
 
-@import "header";
-@import "page";
+@import "ngtraining";
+
 @import "article";
 @import "footer";
 

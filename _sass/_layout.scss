@@ -1,3 +1,18 @@
+@mixin inter-section($topColor, $bottomColor, $transform: 1) {
+  content: '';
+  background: $topColor;
+  $buttonColorWihtOutHash: str-slice($bottomColor + '', 2, 7);
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23"+$buttonColorWihtOutHash+"%3B' /%3E%3C/svg%3E");
+  height: 4rem;
+  margin-bottom: -1px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: block;
+  transform: scaleX($transform);
+}
+
+html,
 body {
   font-family: $root-font-family;
   font-size: $root-font-size;
@@ -9,12 +24,14 @@ a {
   text-decoration: none;
   font-weight: bold;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     text-decoration: underline;
     color: $link-color;
   }
 
-  &:visited, &:active {
+  &:visited,
+  &:active {
     text-decoration: underline;
   }
 
@@ -30,24 +47,12 @@ a {
     display: inline;
     height: 16px;
     margin-bottom: 3px;
-
   }
 }
 
 section {
   padding: 2rem 0 5rem;
-
-  &.gray {
-    background-color: $gray-1;
-  }
-
-  &.green {
-    background-color: $secondary-color;
-  }
-}
-
-p {
-  font-family: $article-font-family;
+  background: #eeeeee;
 }
 
 .row {
@@ -64,9 +69,6 @@ ul {
 }
 
 span {
-  &.green {
-    color: $primary-color;
-  }
   &.bold {
     font-weight: bold;
   }
@@ -81,5 +83,3 @@ span {
   color: #717171;
   background-color: #f9f9f9;
 }
-
-

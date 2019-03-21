@@ -1,35 +1,255 @@
+body {
+  background-image: linear-gradient(
+      to top,
+      rgba(46, 49, 65, 0.8),
+      rgba(46, 49, 65, 0.8)
+    ),
+    url('/public/images/header-bg.jpg');
+  background-color: $primary-color;
+  background-size: auto, cover;
+  background-attachment: fixed, fixed;
+  background-position: center, center;
+}
+
+.index {
+  a {
+    color: white;
+
+    &:hover,
+    &:focus {
+      color: white;
+    }
+  }
+}
+
 section.intro {
+  background: none;
   padding: 0;
+  color: white;
+
+  .image-col {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 1rem 0 2rem;
+
+    .image-border {
+      border: 2px solid white;
+      padding: 0.5rem;
+      border-radius: 50%;
+    }
+    .image {
+      background-image: url('/public/images/me.jpg');
+      height: 180px;
+      width: 180px;
+      border-radius: 50%;
+      background-size: cover;
+    }
+  }
 
   .container {
-    background: url('/public/images/me.png') no-repeat right bottom;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-
+    padding: 8rem 2rem 2rem;
     h1 {
       font-size: 50px;
       font-weight: bold;
       padding-bottom: 1rem;
     }
-    p:not(:last-child) {
-      line-height: 2.2;
+  }
+}
+
+section {
+  padding: 0;
+
+  .container {
+    padding: 4rem 0;
+
+    h2 {
+      text-transform: uppercase;
+      padding-bottom: 0.5em;
+      border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+section.intro::after {
+  @include inter-section(none, #c01133);
+}
+
+section.ngtraining {
+  background-color: #c01133;
+  color: white;
+
+  .ng-intro {
+    background-position: -10px 10px;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+    padding-bottom: 1rem;
+  }
+
+  .ng-items {
+    > div {
+      padding-bottom: 1rem;
     }
 
-    p {
-      max-width: 540px;
-      font-size: 18px;
+    .item {
+      border: 1px dashed white;
+      padding: 1rem;
+      border-radius: 5px;
+      background: #db0035;
+      text-align: center;
 
-      b {
-        color: black;
+      .header {
+        font-weight: bold;
+      }
+
+      .info {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .ng-footer {
+    .button {
+      margin-left: 1rem;
+
+      img{
+        margin-right: .5rem;
+        float: left;
       }
     }
   }
 }
 
-@media screen and (max-width: 960px) {
-  section.intro {
-    .container {
-      background: none !important;
+section.speaking::before {
+  @include inter-section(#c01133, $primary-color, -1);
+}
+
+section.speaking {
+  background: $primary-color;
+  color: white;
+
+  .intro {
+    padding-bottom: 2rem;
+  }
+
+  .image-col {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    .image-border {
+      border: 2px solid white;
+      padding: 0.5rem;
+      border-radius: 50%;
+    }
+    .image {
+      background-image: url('https://pbs.twimg.com/media/D0BRtdRX4AIYoIA.jpg:large');
+      background-position: right center;
+      height: 180px;
+      width: 180px;
+      border-radius: 50%;
+      background-size: cover;
+    }
+  }
+
+  .talk {
+    padding-bottom: 1rem;
+    p {
+      padding: 0;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .talk-title {
+      font-weight: bold;
+    }
+    .talk-links a {
+      color: white !important;
+      font-weight: normal;
+      margin-right: 1rem;
+
+      > i {
+        padding-right: 0.3rem;
+      }
+    }
+  }
+
+  .button-row > div {
+    justify-content: center;
+    display: flex;
+  }
+}
+
+section.speaking::after {
+  @include inter-section($primary-color, #464a61);
+}
+
+section.blog {
+  background: #464a61;
+  color: white;
+
+  .intro {
+    padding-bottom: 1rem;
+  }
+}
+
+section.blog::after {
+  @include inter-section(#464a61, #eeeeee, -1);
+}
+
+section.projects {
+  background: #eeeeee;
+
+  h2 {
+    border-color: #80808059;
+  }
+
+  .intro {
+    padding-bottom: 1rem;
+  }
+
+  .box {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    background: #e2e2e2;
+
+    .image {
+      height: 8rem;
+      background-color: white;
+      margin: -1rem -1rem 1rem -1rem;
+      background-size: contain;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+    }
+
+    h3 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      padding-bottom: 0.5em;
+      border-bottom: solid 2px rgba(0, 0, 0, 0.5);
+      font-weight: bold;
+
+      margin-bottom: 1rem;
+    }
+    .description {
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .even-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .box {
+      background: none;
+      max-width: 200px;
+      margin: 0;
+      padding: 0 0 1rem 0;
+      text-align: center;
     }
   }
 }

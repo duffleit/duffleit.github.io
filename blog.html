@@ -1,0 +1,35 @@
+---
+layout: page
+title: About
+---
+
+<section class="blog-overview">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Blog</h1>
+        <div class="top-text">
+          I'm blogging about a couple of things, but most of them, in one way or
+          another, are <b>related to software engineering</b>:
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <ul class="posts">
+              {% for post in site.posts %}
+              <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                <small>
+                  <time datetime="{{ post.date | date_to_xmlschema }}">
+                    <span>{{ post.date | date_to_string }}</span>
+                  </time>
+                </small>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

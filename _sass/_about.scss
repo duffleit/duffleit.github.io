@@ -1,18 +1,13 @@
-section.about-header {
-  background: url("/public/images/about-me-bg.jpg") center center;
-  background-size: cover;
-  padding: 3rem;
-  color: white;
-
-  h1 {
-    margin: 15rem 0 10rem;
-    font-weight: bold;
-  }
-}
-
 section.about-content{
+  h1{
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 3rem 0;
+  }
+
   p.top-text{
-    margin: 0 0 8rem;
+    margin: 0 0 4rem;
     font-size: larger;
   }
 

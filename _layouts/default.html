@@ -1,98 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+  {% include head.html %}
 
-{% include head.html %}
-
-<body>
-
-<header>
-    <nav class="container">
+  <body>
+    <header>
+      <nav class="container">
         <div class="row">
-            <div class="title">
-                <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-                <small>{{ site.tagline }}</small>
-            </div>
-            <ul class="navbar">
-                <li class="desktop-item"><a href="{{site.posts.first.url}}">Blog</a></li>
-                <li class="desktop-item"><a href="{{ site.baseurl }}/talks">Talks</a></li>
-                <li class="desktop-item"><a href="{{ site.baseurl }}/about">About</a></li>
-                <li class="desktop-item"><a target="_blank" href="https://twitter.com/duffleit" class="twitter-badge">
-                    <i class="fa fa-twitter"></i> follow @duffleit
-                </a></li>
-                <li class="mobile-item"><a href="javascript:void(0);" onclick="showMenu()">&#9776;</a></li>
-            </ul>
-            <ul class="menu" id="mobile-menu">
-                <li class="desktop-item"><a href="{{site.posts.first.url}}">Blog</a></li>
-                <li class="desktop-item"><a href="{{ site.baseurl }}/talks">Talks</a></li>
-                <li class="desktop-item"><a href="{{ site.baseurl }}/about">About</a></li>
-                <li class="desktop-item"><a target="_blank" href="https://twitter.com/duffleit" class="twitter-badge">
-                    <i class="fa fa-twitter"></i> follow @duffleit
-                </a></li>
-            </ul>
+          <div class="title">
+            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+          </div>
+          <ul class="navbar">
+            <li class="desktop-item">
+              <a href="{{ site.baseurl }}/blog">Blog</a>
+            </li>
+            <li class="desktop-item">
+              <a href="{{ site.baseurl }}/talks">Talks</a>
+            </li>
+            <li class="desktop-item">
+              <a href="{{ site.baseurl }}/about">About</a>
+            </li>
+            <li class="desktop-item">
+              <a
+                target="_blank"
+                href="https://twitter.com/duffleit"
+                class="twitter-badge"
+              >
+                <i class="fa fa-twitter"></i> follow @duffleit
+              </a>
+            </li>
+            <li class="mobile-item">
+              <a href="javascript:void(0);" onclick="showMenu()">&#9776;</a>
+            </li>
+          </ul>
         </div>
-    </nav>
-</header>
-<div class="color-row">
-    <div></div>
-</div>
-<div class="content">
-    <main>
+        <div class="row mobile">
+          <ul class="menu" id="mobile-menu">
+            <li class="desktop-item">
+              <a href="{{ site.baseurl }}/blog">Blog</a>
+            </li>
+            <li class="desktop-item">
+              <a href="{{ site.baseurl }}/talks">Talks</a>
+            </li>
+            <li class="desktop-item">
+              <a href="{{ site.baseurl }}/about">About</a>
+            </li>
+            <li class="desktop-item">
+              <a
+                target="_blank"
+                href="https://twitter.com/duffleit"
+                class="twitter-badge"
+              >
+                <i class="fa fa-twitter"></i> follow @duffleit
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="content">
+      <main>
         {{ content }}
-    </main>
+      </main>
 
-    <section class="gray">
+      <section class="contact" id="contact">
         <div class="container">
-            <div class="row">
-                <h2>Get in touch</h2>
-                <p>
-                    I am currently based in Vienna and available for hire to <b>develop with passionate teams</b>.
-                    If you want to get in touch, feel free to <a href="/contact">contact me.</a></i>
-                </p>
+          <div class="row">
+            <div class="col-12">
+              <h2 style="text-align: center">
+                Let's make<br />
+                <b>something great</b><br />
+                together<br />
+              </h2>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              I am currently <b>based in Vienna</b> and always look for
+              challenges in Central Europe - sometimes even around the globe -
+              to work <b>with passionate teams</b>. If you want to get in touch,
+              reach out:
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <form
+                action="https://formspree.io/david@leitner.io"
+                method="POST"
+              >
+                <label>Name</label>
+                <input type="text" name="name" id="name" />
+                <label>Email</label>
+                <input type="email" name="email" id="email" />
+                <label>Message</label>
+                <textarea name="message" id="message" rows="4"></textarea>
+                <div>
+                  <button
+                    type="submit"
+                    class="button"
+                  >
+                    <i class="fa fa-paper-plane"></i><span>Send message</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-4">
+              <ul>
+                <li class="adress">
+                  <b>David Leitner</b><br />
+                  Anton-Kuh-Weg 5/43<br />
+                  1030 Wien<br />
+                  Vienna, Austria
+                </li>
+                <li class="mail">
+                  <a href="mailto:david@leitner.io">david@leitner.io</a>
+                </li>
+                <li class="xing">
+                  <a href="https://www.xing.com/profile/David_Leitner4"
+                    >xing.com</a
+                  >
+                </li>
+                <li class="linkedin">
+                  <a href="https://www.linkedin.com/in/david-leitner-7768a3136/"
+                    >linkedin.com</a
+                  >
+                </li>
+                <li class="wko">
+                  <img
+                    src="https://firmen.wko.at/Web/Library/images/logo-wko.png"
+                  /><a
+                    href="https://firmen.wko.at/Web/DetailsKontakt.aspx?FirmaID=fbc74d94-78c5-4965-b733-fce9c06e0b85&StandortID=0&Suchbegriff=david+leitner&Page=1"
+                    >Auszug</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <footer class="footer">
+      <footer class="footer">
         <div class="container">
-            <div class="row">
-                <ul>
-                    <li><a href="{{site.posts.first.url}}">Blog</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-                <ul>
-                    <li class="social-links">
-                        <a href="https://www.xing.com/profile/David_Leitner4" target="_blank" class="fa fa-xing"></a>
-                        <a href="https://www.linkedin.com/in/david-leitner-7768a3136" target="_blank"
-                           class="fa fa-linkedin"></a>
-                        <a href="http://github.com/duffleit" target="_blank" class="fa fa-github"></a>
-                        <a href="http://twitter.com/duffleit" target="_blank" class="fa fa-twitter"></a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="disclaimer">Contents and opinions are <b>my own</b>.</li>
-                </ul>
-            </div>
+          <div class="row">
+            <ul>
+              <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
+              <li><a href="{{ site.baseurl }}/about">About</a></li>
+            </ul>
+            <ul>
+              <li class="social-links">
+                <a
+                  href="https://www.xing.com/profile/David_Leitner4"
+                  target="_blank"
+                  class="fa fa-xing"
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/david-leitner-7768a3136"
+                  target="_blank"
+                  class="fa fa-linkedin"
+                ></a>
+                <a
+                  href="http://github.com/duffleit"
+                  target="_blank"
+                  class="fa fa-github"
+                ></a>
+                <a
+                  href="http://twitter.com/duffleit"
+                  target="_blank"
+                  class="fa fa-twitter"
+                ></a>
+              </li>
+            </ul>
+            <ul>
+              <li class="disclaimer">
+                Contents and opinions are <b>my own</b>.
+              </li>
+            </ul>
+          </div>
         </div>
-    </footer>
-</div>
+      </footer>
+    </div>
 
-{% if site.analytics_id %}
-<script>
-    (function (i, s, o, g, r, a, m) {
+    {% if site.analytics_id %}
+    <script>
+      (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
+        (i[r] =
+          i[r] ||
+          function() {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
         a.async = 1;
         a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    ga('create', '{{ site.analytics_id }}', 'auto');
-    ga('send', 'pageview');
-</script>
-{% endif %}
-</body>
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        'script',
+        '//www.google-analytics.com/analytics.js',
+        'ga'
+      );
+      ga('create', '{{ site.analytics_id }}', 'auto');
+      ga('send', 'pageview');
+    </script>
+    {% endif %}
+  </body>
 </html>
