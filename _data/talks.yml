@@ -1,11 +1,17 @@
-- speakerdeck-id: 8090271de0db43a5848c61dcc3aa34dd
+- speakerdeck-id: 3706ac97a77d41ad9c32319d9824c0e7
+  title: Micro Frontends - a Strive for fully Verticalized Systems
+  location: Voxxed Days Bucharest (Bucharest, Romania)
+  date: 2019-03-22
+  slides: https://speakerdeck.com/duffleit/micro-frontends-a-strive-for-fully-verticalized-systems-e835fab5-5409-48e5-b229-eee577534543
+  event: https://romania.voxxeddays.com/bucharest/2019-03-20/
+- speakerdeck-id: c07ba7aad976429b9701b492c173524a
   title: An approach driven Comparison on Microfrontends
   location: agentconf.sh (Dornbirn, Austria)
   date: 2019-02-22
-  slides: https://speakerdeck.com/duffleit/microfrontends-c587441e-d8e7-4883-9e14-c9dfaf8e36e3
+  slides: https://speakerdeck.com/duffleit/microfrontends-5940626a-73dc-4535-8abc-ee425dcd0866
   event: http://snowcamp.io/
 - speakerdeck-id: 8090271de0db43a5848c61dcc3aa34dd
-  title: Micro Frontends beyond the hype
+  title: Micro Frontends Beyond the Hype
   location: snowcamp.io (Grenoble, France)
   date: 2019-01-24
   slides: https://speakerdeck.com/duffleit/microfrontends-c587441e-d8e7-4883-9e14-c9dfaf8e36e3
