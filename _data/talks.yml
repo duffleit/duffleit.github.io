@@ -1,3 +1,15 @@
+- speakerdeck-id: a00eef120d0a4303a6a640f0d9cf06ae
+  title: MicroFrontends - a Strive for Fully Verticalized Systems
+  location: EnterJS (Darmstadt, Deutschland)
+  date: 2019-06-27
+  slides: https://speakerdeck.com/duffleit/microfrontends-a-strive-for-fully-verticalized-systems
+  event: https://www.enterjs.de
+- speakerdeck-id: 6aa5c0f007fc4470bb949759ca253166
+  title: Micro Frontends
+  location: DevoxxPL (Krakow, Poland)
+  date: 2019-06-24
+  slides: https://speakerdeck.com/duffleit/microfrontends-f5b07c7f-392b-4e73-b788-2806ba7341d3
+  event: http://devoxx.pl/
 - speakerdeck-id: a9e3ddb7a20146369520c4155be8de28
   title: Verticalized Systems and Micro Frontends
   location: Voxxed Days Athen (Athen, Greece)
@@ -5,10 +17,10 @@
   slides: https://speakerdeck.com/duffleit/verticalized-systems-and-micro-frontends
   event: https://voxxeddays.com/athens/
 - speakerdeck-id: 9069a79be28b477c99d5c90eec88ed7d
-  title: MicroFrotends - A Strive for fully Verticalized Systems
+  title: MicroFrontends - A Strive for fully Verticalized Systems
   location: µCon London 2019 (London, Uk)
   date: 2019-05-31
-  slides: https://speakerdeck.com/duffleit/microfrotends-a-strive-for-fully-verticalized-systems
+  slides: https://speakerdeck.com/duffleit/microfrontends-a-strive-for-fully-verticalized-systems-a8fe393b-0247-42cd-b4e2-62ba3eeb460b
   video: https://skillsmatter.com/skillscasts/13498-micro-frontends-a-strive-for-fully-verticalized-systems#video
   event: https://skillsmatter.com/conferences/11982-con-london-2019-the-conference-on-microservices-ddd-and-software-architecture
 - speakerdeck-id: dbf5ac4c4d4047e3a4bc4c0f6cc696cc
