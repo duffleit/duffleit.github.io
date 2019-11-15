@@ -27,7 +27,7 @@ Of course, we can start trying to find metrics that evaluate if abstractions are
 ## What maintainability really needs
 So, if metrics only observe a partition of the maintainability, what’s the alternative? Well, __as software is a social construct__, the most important ingredient for a maintainable codebase is __commitment__. People will always find a way around to sidestep given rules if they don't believe in their benefits. But, if they have a __common understanding and commitment__ about maintainability in their codebase, they will no longer question it.
 
-This definition of maintainability within a team is not rigid but dynamic, depends on the context, experiences or the given mindset in a team, and is therefore in most cases __not definable by measures__. If you force this commitment, the team will follow this stable vision of maintainability by themselves. For example, by using concepts like Pull-Requests, or maybe even some __well-selected metrics on which they agree as team__.
+This definition of maintainability within a team is not rigid but dynamic, depends on the context, experiences or the given mindset in a team, and is therefore in most cases __not definable by metrics__. If you force this commitment, the team will follow this stable vision of maintainability by themselves. For example, by using concepts like Pull-Requests, or maybe even some __well-selected metrics on which they agree as team__.
 
 I think there can be cases where this approach does not lead to the expected result. But that's usually an indicator of non-existent or inadequate framework conditions. The application of metrics would only combat the symptoms of the problem instead of the cause.
 
