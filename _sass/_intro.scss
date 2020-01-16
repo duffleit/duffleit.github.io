@@ -1,10 +1,10 @@
 body {
   background-image: linear-gradient(
-      to top,
-      rgba(46, 49, 65, 0.8),
-      rgba(46, 49, 65, 0.8)
-    ),
-    url('/public/images/header-bg.jpg');
+                  to top,
+                  rgba(46, 49, 65, 0.8),
+                  rgba(46, 49, 65, 0.8)
+  ),
+  url('/public/images/header-bg.jpg');
   background-color: $primary-color;
   background-size: auto, cover;
   background-attachment: fixed, fixed;
@@ -38,6 +38,7 @@ section.intro {
       padding: 0.5rem;
       border-radius: 50%;
     }
+
     .image {
       background-image: url('/public/images/me.jpg');
       height: 180px;
@@ -49,6 +50,7 @@ section.intro {
 
   .container {
     padding: 2rem;
+
     h1 {
       font-size: 50px;
       font-weight: bold;
@@ -73,8 +75,30 @@ section {
 }
 
 section.intro::after {
-  @include inter-section(none, #c01133);
+  @include inter-section(none, #1eaee9);
 }
+
+section.squer {
+  background-color: #1eaee9;
+  color: white;
+  text-align: center;
+
+  b {
+    font-size: 1.2rem;
+  }
+
+  .squer-intro {
+    background-position: -10px 10px;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+    padding-bottom: 0rem;
+  }
+}
+
+section.squer::after {
+  @include inter-section(#1eaee9, #c01133);
+}
+
 
 section.ngtraining {
   background-color: #c01133;
@@ -113,7 +137,7 @@ section.ngtraining {
     .button {
       margin-left: 1rem;
 
-      img{
+      img {
         margin-right: .5rem;
         float: left;
       }
@@ -143,6 +167,7 @@ section.speaking {
       padding: 0.5rem;
       border-radius: 50%;
     }
+
     .image {
       background-image: url('https://pbs.twimg.com/media/D0BRtdRX4AIYoIA.jpg:large');
       background-position: right center;
@@ -155,14 +180,17 @@ section.speaking {
 
   .talk {
     padding-bottom: 1rem;
+
     p {
       padding: 0;
       margin: 0;
       line-height: 1.5;
     }
+
     .talk-title {
       font-weight: bold;
     }
+
     .talk-links a {
       color: white !important;
       font-weight: normal;
@@ -232,6 +260,7 @@ section.projects {
 
       margin-bottom: 1rem;
     }
+
     .description {
       font-size: 0.8rem;
       margin-bottom: 1rem;
