@@ -23,30 +23,11 @@ Basically, context Injection was designed to share data between step definitions
 
 {% highlight C# %}
 [Binding]
-public sealed class WaterFlowerSteps
-{
-    private readonly FlowerContext _flowerContext;
-
-    //Inject Flower Context in Custructor
-    public WaterFlowerSteps(FlowerContext flowerContext)
-    {
-        _flowerContext = flowerContext;
-    }
-
-    [When(@"i start watering the currently selected flower")]
-    public void WhenIStartWateringIt()
-    {
-        var currentFlower = _flowerContext.CurrentlySelectedFlower;
-        FlowerSprinker.SprinkFlower(currentFlower);
-    }
-}
-
-[Binding]
 public sealed class FlowerSelectorSteps
 {
     private readonly FlowerContext _flowerContext;
 
-    //also inject Flower Context in Constructor
+    //Inject Flower Context in Constructor - as this is the first time it is injected, this will create a new instance of it
     public FlowerSelectorSteps(FlowerContext flowerContext)
     {
         _flowerContext = flowerContext;
@@ -56,6 +37,25 @@ public sealed class FlowerSelectorSteps
     public void WhenIHaveSelectedOnlyTheFlower(string flowerName)
     {
         _flowerContext.CurrentlySelectedFlower = flowerName;
+    }
+}
+
+[Binding]
+public sealed class WaterFlowerSteps
+{
+    private readonly FlowerContext _flowerContext;
+
+    //Inject Flower Context in Constructor again - this will use the instance already created in previously called Steps Bindings
+    public WaterFlowerSteps(FlowerContext flowerContext)
+    {
+        _flowerContext = flowerContext;
+    }
+
+    [When(@"I start watering the currently selected flower")]
+    public void WhenIStartWateringIt()
+    {
+        var currentFlower = _flowerContext.CurrentlySelectedFlower;
+        FlowerSprinkler.SprinkleFlower(currentFlower);
     }
 }
 
@@ -83,15 +83,15 @@ Many step definitions I’ve seen look something like this:
 [Binding]
 public sealed class WaterFlowerSteps
 {
-    FlowerSprinkerMock _flowerSprinkerMock;
+    FlowerSprinklerMock _flowerSprinklerMock;
     private int _numberOfWateredFlowers;
 
     public WaterFlowerSteps()
     {
-        _flowerSprinkerMock = new FlowerSprinkerMock();
+        _flowerSprinklerMock = new FlowerSprinklerMock();
     }
 
-    [Then(@"Todays last watered flower is '(.*)'")]
+    [Then(@"Today’s last watered flower is '(.*)'")]
     public void TodaysLastWateredFlowerIs(string expectedFlowerName)
     {
         if (_numberOfWateredFlowers < 1)
@@ -99,12 +99,12 @@ public sealed class WaterFlowerSteps
             throw new Exception("no flower was watered today.");
         }
 
-        if (!_flowerSprinkerMock.IsAwake())
+        if (!_flowerSprinklerMock.IsAwake())
         {
-            _flowerSprinkerMock.WakeUp();            
+            _flowerSprinklerMock.WakeUp();
         }
 
-        var logDataXml = _flowerSprinkerMock.GetCurrentLog();
+        var logDataXml = _flowerSprinklerMock.GetCurrentLog();
         var serializer = new XmlSerializer(typeof(LogData));
         var reader = new StringReader(logDataXml);
         var logData = (LogData)serializer.Deserialize(reader);
@@ -121,25 +121,25 @@ public sealed class WaterFlowerSteps
 I guess you see the problem with this kind of test code. It’s **hard to read, understand and also to maintain.** 
 The interesting thing, however, is that most of the developers I know would never write a production code like this. But if we talk about test code: “Yolo man, it’s green”. For an unknown reason, I still have the feeling that test code is too often seen as a kind of unloved duty by many developers. But hey, here is a little secret: If you do it right, writing **test code** can be quite cool. That’s why it **deserves your love**, too.
 
-For this reason I created a `FlowerSprinkerDriver`, which holds all the **knowledge** about **how to perform** the **automation logic**:
+For this reason I created a `FlowerSprinklerDriver`, which holds all the **knowledge** about **how to perform** the **automation logic**:
 
 {% highlight C# %}
-public class FlowerSprinkerDriver
+ public class FlowerSprinklerDriver
 {
-    private FlowerSprinkerMock _flowerSprinkerMock;
+    private FlowerSprinklerMock _flowerSprinkerMock;
 
-    public FlowerSprinkerDriver()
+    public FlowerSprinklerDriver()
     {
-        _flowerSprinkerMock = new FlowerSprinkerMock();
+        _flowerSprinkerMock = new FlowerSprinklerMock();
     }
 
     public int TodaysWateredFlowers { get; private set; }
 
-    private FlowerSprinkerMock AwakeFlowerSprinkerMock
+    private FlowerSprinklerMock AwakeFlowerSprinklerMock
     {
         get
         {
-            if(!_flowerSprinkerMock.IsAwake()) 
+            if (!_flowerSprinkerMock.IsAwake())
                 _flowerSprinkerMock.WakeUp();
             return _flowerSprinkerMock;
         }
@@ -147,7 +147,7 @@ public class FlowerSprinkerDriver
 
     public LogData GetCurrentLogData()
     {
-        var logDataXml = AwakeFlowerSprinkerMock.GetCurrentLog();
+        var logDataXml = AwakeFlowerSprinklerMock.GetCurrentLog();
         var serializer = new XmlSerializer(typeof(LogData));
         var reader = new StringReader(logDataXml);
         return (LogData)serializer.Deserialize(reader);
@@ -167,17 +167,17 @@ This causes, that the **step definition only delegates** to the **correct driver
 [Binding]
 public sealed class WaterFlowerSteps
 {
-    FlowerSprinkerDriver _flowerSprinkerDriver;
+    FlowerSprinklerDriver _flowerSprinklerDriver;
 
-    public WaterFlowerSteps2()
+    public WaterFlowerSteps()
     {
-        _flowerSprinkerDriver = new FlowerSprinkerDriver();
+        _flowerSprinklerDriver = new FlowerSprinklerDriver();
     }
 
-    [Then(@"Todays last watered flower is '(.*)'")]
+    [Then(@"Today’s last watered flower is '(.*)'")]
     public void TodayslastWateredFlowerIs(string expectedFlowerName)
     {
-        var lastWateredFlower = _flowerSprinkerDriver.GetLastWateredFlower();
+        var lastWateredFlower = _flowerSprinklerDriver.GetLastWateredFlower();
 
         Assert.IsNotNull(lastWateredFlower, "there is no last watered flower");
         Assert.AreEqual(expectedFlowerName, lastWateredFlower);
